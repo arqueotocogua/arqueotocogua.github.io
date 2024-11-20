@@ -1,0 +1,246 @@
+/* Ajuste del tamaño del mapa para responsividad */
+#map {
+  width: 100%;
+  height: 100vh; /* Ocupa el 100% de la pantalla en móviles */
+}
+
+/* Estilos para el título superpuesto */
+#map-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 100px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo negro con 50% de transparencia */
+  border-radius: 8px;
+  z-index: 1000; /* Asegura que se superponga al mapa */
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+/* Ajuste para cambiar el fondo y opacidad si se desea */
+#map-title:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro al pasar el mouse */
+  color: #FFD700; /* Cambia el color del texto al pasar el mouse (Ejemplo: dorado) */
+}
+
+
+.map-coordinate {
+  position: absolute top;
+  bottom: 0;
+  font-family: 'Lato', sans-serif;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff7e;
+  /* border: 1px solid black; */
+  border-radius: 10%;
+}
+
+.full-screen {
+  background-color: #fff;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 220px;
+}
+
+.zoom-to-layer {
+  background-color: #fff;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 260px;
+}
+
+/* Ajuste para el carrusel de imágenes dentro del popup */
+.imgpopup {
+  width: 100%;
+  max-height: 50vh;         /* Mayor altura para la imagen, ajustable */
+  object-fit:contain;        /* Ajusta las imágenes sin distorsión */
+  display: block;
+  margin: 0 auto;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+
+/* Ajuste del popup para que se adapte mejor al contenido */
+.leaflet-popup-content-wrapper {
+  background: #eeeeee;
+  color: rgb(175, 102, 6);
+  font-size: 13px;
+  line-height: 1.4;
+  border-radius: 8px;
+  max-width: 90vw;          /* Máximo del 60% del ancho de la ventana */
+  min-width: 300px;         /* Ancho mínimo para pantallas más pequeñas */
+  max-height: 75vh;         /* Altura máxima del 75% de la ventana */
+  padding: 2px;
+  overflow-y: auto;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start; /* Inicia desde el comienzo */
+}
+
+/* Ancho mayor para pantallas de escritorio y portátil */
+@media (min-width: 1024px) {
+  .leaflet-popup-content-wrapper {
+    max-width: 100vw;  /* Ancho máximo del 70% del ancho de la ventana en pantallas grandes */
+    padding: 15px;    /* Aumenta el padding para mejorar el aspecto en pantallas grandes */
+  }
+}
+
+/* Centrado del texto y de los elementos de imagen en el popup */
+.leaflet-popup-content {
+  background: transparent;
+  text-align: justify;       /* Centra el texto dentro del popup */
+  color: #000000;
+  width: 100%;
+}
+
+
+.leaflet-popup-content-wrapper .leaflet-popup-content {
+  background: transparent;
+  text-align: justify;
+  text-decoration: none;
+  color: #000000;
+}
+
+.leaflet-popup-tip-container {
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.transparent-tooltip {
+  background: transparent;
+  border: 1px solid red;
+  box-shadow: none;
+}
+
+.transparent-tooltip::before {
+  border: none;
+}
+
+
+.cultuLabel {
+  position: absolute center;
+  font-size: 12px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0);
+  color: rgb(121, 58, 0);
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+  border: 1px;
+  border-radius: 0px;
+  box-shadow: 0 0px 0px;
+  font-family: 'Lato', sans-serif;
+  bottom: -10px;
+  cursor: pointer;
+}
+
+.mpios {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+  color: rgb(65, 65, 65);
+}
+
+.lindosa {
+
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background-color: rgb(228, 214, 25);
+  border-color: rgb(228, 174, 25);
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  border: none !important;
+}
+
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+  font-size: 12px;
+  font-weight: bold;
+
+}
+
+.leaflet-control-layers-toggle {
+  width: auto;
+  background-position: 15px 50%;
+  margin-right: 5em;
+  padding: 5px;
+  padding-top: 14px;
+  padding-left: 50px;
+  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-color: aqua;
+  line-height: 15px;
+}
+
+.leaflet-control-layers-toggle:after {
+  content: 'Capas';
+  color: rgb(0, 3, 190);
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
+/*-------------------*/
+
+
+/* Estilos para el modal de contexto */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 2000; /* Asegura que esté por encima del mapa */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Ajusta al 90% del ancho de la pantalla */
+  max-width: 600px; /* Tamaño máximo para pantallas grandes */
+  max-height: 80vh; /* Asegura que no exceda el 80% de la altura de la pantalla */
+  overflow-y: auto; /* Permite scroll en caso de contenido muy grande */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal iframe {
+  width: 100%; /* Ajusta al ancho del modal */
+  height: 50vh; /* Escala dinámicamente según la altura de la pantalla */
+  border: none;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+

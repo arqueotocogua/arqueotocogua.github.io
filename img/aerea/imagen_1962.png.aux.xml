@@ -1,0 +1,17 @@
+<PAMDataset>
+  <SRS dataAxisToSRSAxisMapping="1,2">LOCAL_CS["IMAGINE GeoTIFF Support ERDAS IMAGINE 2013 13.0.0.92 Geocoding information not available Projection Name = Unknown Units = inches GeoTIFF Units = inches",UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform> -7.3057299999999998e+01,  8.2820738137084699e-06,  0.0000000000000000e+00,  5.8445999999999998e+00,  0.0000000000000000e+00, -8.2815734989648102e-06</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_MAXIMUM">236</MDI>
+      <MDI key="STATISTICS_MEAN">112.00435915139</MDI>
+      <MDI key="STATISTICS_STDDEV">30.685864326654</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
